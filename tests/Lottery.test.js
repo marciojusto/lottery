@@ -18,9 +18,7 @@ beforeEach(async () => {
   lottery = await
       new web3.eth
               .Contract(abi)
-              .deploy({
-                data: evm.bytecode.object,
-              })
+              .deploy({ data: evm.bytecode.object })
               .send({ from: accounts[0], gas: 1_000_000 });
 });
 
